@@ -1,0 +1,72 @@
+.hero {
+  height: 646px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  z-index: 1;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 84px;
+  color: #292e3d;
+  max-width: 556px;
+  margin: 0;
+}
+
+.hero__button {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  background-color: #292e3d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.hero__button_left {
+  right: 208px;
+  width: 208px;
+}
+
+.hero__button_right {
+  right: 0;
+  width: 207px;
+}
+
+.hero__button-arrow {
+  width: 26px;
+  height: 17px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__button-arrow_left {
+  background-image: url(../../assets/arrow-hero-left.svg);
+}
+
+.hero__button-arrow_right {
+  background-image: url(../../assets/arrow-hero-right.svg);
+}
+
+#swiper-hero {
+  background-color: #3559c7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

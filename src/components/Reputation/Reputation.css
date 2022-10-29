@@ -1,0 +1,18 @@
+.reputation {
+  padding-top: 60px;
+  padding-bottom: 84px;
+}
+
+.reputation__title {
+  padding-bottom: 50px;
+}
+
+.reputation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 66px;
+}

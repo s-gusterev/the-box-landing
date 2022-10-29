@@ -1,0 +1,21 @@
+.section-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.section-title_color_light {
+  color: #ffffff;
+}
+.section-title_color_ldark {
+  color: #292e3d;
+}
+
+.section-title_position_center {
+  text-align: center;
+}
+
+.section-title_position_left {
+  text-align: left;
+}

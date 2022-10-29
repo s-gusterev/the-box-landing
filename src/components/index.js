@@ -11,6 +11,8 @@ import Services from './Services/Services';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
 import HeroSwiperCard from './HeroSwiperCard/HeroSwiperCard';
+import SectionTitle from './SectionTitle/SectionTitle';
+import ReputationCard from './ReputationCard/ReputationCard';
 
 
-export { Header, Hero, About, Consultation, Experience, Feedback, Footer, Projects, Reputation, Services, Logo, Menu, HeroSwiperCard }
+export { Header, Hero, About, Consultation, Experience, Feedback, Footer, Projects, Reputation, Services, Logo, Menu, HeroSwiperCard, SectionTitle, ReputationCard }

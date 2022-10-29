@@ -18,14 +18,17 @@ const App = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Reputation />
-      <About />
-      <Services />
-      <Experience />
-      <Consultation />
-      <Projects />
-      <Feedback />
+      <main className='main'>
+        <Hero />
+        <Reputation />
+        <About />
+        <Services />
+        <Experience />
+        <Consultation />
+        <Projects />
+        <Feedback />
+      </main>
+
       <Footer />
     </>
   );

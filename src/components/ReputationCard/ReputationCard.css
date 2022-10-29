@@ -1,0 +1,34 @@
+.reputation-card {
+  background-color: #fff;
+  border: 1.4px solid #e0e3eb;
+  border-radius: 4px;
+  max-width: 292px;
+  padding: 20px 20px 40px;
+  box-sizing: border-box;
+}
+
+.reputation-card__img {
+  display: block;
+  margin-bottom: 18px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.reputation-card__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #3d445c;
+}
+
+.reputation-card__paragraph {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #858ead;
+}

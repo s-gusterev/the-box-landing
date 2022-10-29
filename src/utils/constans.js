@@ -1,4 +1,4 @@
-import { hero, hero2, hero3, hero4, hero5, } from '../assets'
+import { hero, hero2, hero3, hero4, hero5, iconReputation1, iconReputation2 } from '../assets'
 
 const menu = [{
   title: 'Home',
@@ -48,4 +48,20 @@ const heroSlider = [{
 }
 ]
 
-export { menu, heroSlider };
+const reputationCards = [{
+  image: iconReputation1,
+  title: 'Best Services',
+  paragraph: 'Nullam senectus porttitor in eget. Eget rutrum leo interdum.'
+},
+{
+  image: iconReputation1,
+  title: 'Best Teams',
+  paragraph: 'Cursus semper tellus volutpat aliquet lacus. '
+},
+{
+  image: iconReputation2,
+  title: 'Best Designs',
+  paragraph: 'Ultricies at ipsum nunc, tristique nam lectus.'
+}]
+
+export { menu, heroSlider, reputationCards };

@@ -1,4 +1,7 @@
-import { hero, hero2, hero3, hero4, hero5, iconReputation1, iconReputation2 } from '../assets'
+import {
+  hero, hero2, hero3, hero4, hero5, iconReputation1, iconReputation2, architecture, construction,
+  consultation, electric, renovation, repair
+} from '../assets'
 
 const menu = [{
   title: 'Home',
@@ -64,4 +67,41 @@ const reputationCards = [{
   paragraph: 'Ultricies at ipsum nunc, tristique nam lectus.'
 }]
 
-export { menu, heroSlider, reputationCards };
+const services = [{
+  title: 'Construction',
+  image: construction,
+  theme: 'light',
+  id: '1'
+}, {
+  title: 'Renovation',
+  image: renovation,
+  theme: 'dark',
+  id: '2'
+},
+{
+  title: 'Consultation',
+  image: consultation,
+  theme: 'light',
+  id: '3'
+},
+{
+  title: 'Repair Services',
+  image: repair,
+  theme: 'dark',
+  id: '4'
+},
+{
+  title: 'Architecture',
+  image: architecture,
+  theme: 'light',
+  id: '5'
+},
+{
+  title: 'Electric',
+  image: electric,
+  theme: 'dark',
+  id: '6'
+}
+]
+
+export { menu, heroSlider, reputationCards, services };

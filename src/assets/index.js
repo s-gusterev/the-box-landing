@@ -12,9 +12,14 @@ import consultation from './consultation-icon-dark.svg';
 import electric from './electric-icon-light.svg';
 import renovation from './renovation-icon-light.svg';
 import repair from './repair-icon-light.svg';
+import clientsIllustration from './clients-illustration.png';
+import awardIllustration from './award-illustration.png';
+import businessIllustration from './business-illustration.png';
+import projectsIllustration from './projects-illustration.png';
 
 
 export {
   hero, hero2, hero3, hero4, hero5, iconReputation1, iconReputation2, about, architecture, construction,
-  consultation, electric, renovation, repair
+  consultation, electric, renovation, repair, clientsIllustration, awardIllustration, businessIllustration,
+  projectsIllustration
 }

@@ -1,6 +1,7 @@
 import {
   hero, hero2, hero3, hero4, hero5, iconReputation1, iconReputation2, architecture, construction,
-  consultation, electric, renovation, repair
+  consultation, electric, renovation, repair, clientsIllustration, awardIllustration, businessIllustration,
+  projectsIllustration
 } from '../assets'
 
 const menu = [{
@@ -104,4 +105,28 @@ const services = [{
 }
 ]
 
-export { menu, heroSlider, reputationCards, services };
+const experience = [
+  {
+    title: 'Happy Clients',
+    number: '84',
+    image: clientsIllustration
+  },
+  {
+    title: 'Projects Completed',
+    number: '123',
+    image: projectsIllustration
+  },
+  {
+    title: 'Awards Win',
+    number: '37',
+    image: awardIllustration
+  },
+  {
+    title: 'Years in Business',
+    number: '30',
+    image: businessIllustration
+  },
+
+]
+
+export { menu, heroSlider, reputationCards, services, experience };

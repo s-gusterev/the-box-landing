@@ -197,16 +197,17 @@ const projects = [{
 {
   id: 'project_10',
   title: 'Wish Stone Building',
-  address: '2972 Westheimer Rd. Santa Ana, Illinois',
+  address: '3517 W. Gray St. Utica, Pennsylvania',
   category: 'Residential',
-  image: project_10
+  image: project_11
 },
 {
   id: 'project_11',
   title: 'Mr. Parkinston’s House',
-  address: '3517 W. Gray St. Utica, Pennsylvania',
+  address: '2972 Westheimer Rd. Santa Ana, Illinois',
+
   category: 'Other',
-  image: project_11
+  image: project_10
 },
 {
   id: 'project_12',

@@ -104,6 +104,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 250ms ease;
 }
 
 .projects__button-slider {
@@ -124,11 +125,11 @@
   justify-content: center;
   gap: 10px;
   z-index: 2;
-  transition: all 250ms ease;
 }
 
 .projects__button-slider:disabled {
   background-color: rgba(41, 46, 61, 0.274);
+  transition: all 0ms ease;
 }
 
 .projects__button-slider-arrow {

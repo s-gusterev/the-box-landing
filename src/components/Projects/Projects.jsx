@@ -6,6 +6,7 @@ import { projects } from '../../utils/constans';
 import { useRef } from 'react';
 import { Navigation, Pagination, Grid } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Swiper Styles
 import 'swiper/css';
@@ -109,27 +110,36 @@ const Projects = () => {
               modules={[Grid, Pagination, Navigation]}
               className='projects__cards'
             >
-              {cards.map((card) => (
-                <SwiperSlide key={card.id} className='projects__card'>
-                  <img
-                    className='projects__card-img'
-                    src={card.image}
-                    alt={card.title}
-                  />
-                  <div className='project__card-text'>
-                    <h3 className='projects__card-title'>{card.title}</h3>
-                    <p className='projects__card-address'>{card.address}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
+              <AnimatePresence>
+                {cards.map((card) => (
+                  <SwiperSlide key={card.id} className='projects__card'>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <img
+                        className='projects__card-img'
+                        src={card.image}
+                        alt={card.title}
+                      />
+                      <div className='project__card-text'>
+                        <h3 className='projects__card-title'>{card.title}</h3>
+                        <p className='projects__card-address'>{card.address}</p>
+                      </div>
+                    </motion.div>
+                  </SwiperSlide>
+                ))}
+              </AnimatePresence>
             </Swiper>
           </div>
           <div
             className='projects__buttons'
             style={
               cards.length > 5
-                ? { visibility: 'visible' }
-                : { visibility: 'hidden' }
+                ? { visibility: 'visible', transition: 'all ease 0ms' }
+                : { visibility: 'hidden', transition: 'all  ease 0ms' }
             }
           >
             <button

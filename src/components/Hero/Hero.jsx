@@ -1,16 +1,19 @@
 import React from 'react';
 import { useRef } from 'react';
 import { HeroSwiperCard } from '../../components';
-import { Navigation, Pagination, EffectFade } from 'swiper';
+import { Navigation, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { heroSlider } from '../../utils/constans';
-import './Hero.css';
+
 // Swiper Styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 //
+
+import './Hero.css';
+
 const Hero = () => {
   const swiperRef = useRef();
   return (

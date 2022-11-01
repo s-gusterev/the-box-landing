@@ -124,15 +124,12 @@
   justify-content: center;
   gap: 10px;
   z-index: 2;
+  transition: all 250ms ease;
 }
 
-/* .projects__button-slider_left {
-  width: 208px;
+.projects__button-slider:disabled {
+  background-color: rgba(41, 46, 61, 0.274);
 }
-
-.projects__button-slider_right {
-  width: 207px;
-} */
 
 .projects__button-slider-arrow {
   width: 26px;
@@ -169,4 +166,8 @@
 
 .projects__paginations .swiper-pagination-bullet-active {
   background-color: #2947a9;
+}
+
+#projects__paginations {
+  width: min-content;
 }

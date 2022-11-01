@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { projects } from '../../utils/constans';
@@ -17,6 +17,25 @@ import './Projects.css';
 
 const Projects = () => {
   const swiperRef = useRef();
+  const [cards, setCards] = useState(projects);
+  const [activeProjectClass, setActiveProjectClass] = useState(0);
+
+  const addClassProjects = (index) => {
+    setActiveProjectClass(index);
+  };
+
+  const resetClassProjects = () => {
+    setActiveProjectClass(0);
+    setCards(projects);
+  };
+
+  const filterResult = (item, index) => {
+    const result = projects.filter((currentData) => {
+      return currentData.category === item;
+    });
+    setCards(result);
+    addClassProjects(index);
+  };
 
   return (
     <section className='projects container'>
@@ -26,23 +45,44 @@ const Projects = () => {
           <li className='projects__item'>
             <button
               type='button'
-              className='projects__button projects__button_active'
+              className={`projects__button ${
+                activeProjectClass === 0 ? 'projects__button_active' : ''
+              } `}
+              onClick={() => resetClassProjects()}
             >
               All
             </button>
           </li>
           <li className='projects__item'>
-            <button type='button' className='projects__button'>
+            <button
+              type='button'
+              className={`projects__button ${
+                activeProjectClass === 1 ? 'projects__button_active' : ''
+              } `}
+              onClick={() => filterResult('Commercial', 1)}
+            >
               Commercial
             </button>
           </li>
           <li className='projects__item'>
-            <button type='button' className='projects__button'>
+            <button
+              type='button'
+              className={`projects__button ${
+                activeProjectClass === 2 ? 'projects__button_active' : ''
+              } `}
+              onClick={() => filterResult('Residential', 2)}
+            >
               Residential
             </button>
           </li>
           <li className='projects__item'>
-            <button type='button' className='projects__button'>
+            <button
+              type='button'
+              className={`projects__button ${
+                activeProjectClass === 3 ? 'projects__button_active' : ''
+              } `}
+              onClick={() => filterResult('Other', 3)}
+            >
               Other
             </button>
           </li>
@@ -69,7 +109,7 @@ const Projects = () => {
               modules={[Grid, Pagination, Navigation]}
               className='projects__cards'
             >
-              {projects.map((card) => (
+              {cards.map((card) => (
                 <SwiperSlide key={card.id} className='projects__card'>
                   <img
                     className='projects__card-img'
@@ -84,8 +124,14 @@ const Projects = () => {
               ))}
             </Swiper>
           </div>
-
-          <div className='projects__buttons'>
+          <div
+            className='projects__buttons'
+            style={
+              cards.length > 5
+                ? { visibility: 'visible' }
+                : { visibility: 'hidden' }
+            }
+          >
             <button
               className='projects__button-slider projects__button-slider_left'
               onClick={() => swiperRef.current?.slidePrev()}
@@ -93,7 +139,10 @@ const Projects = () => {
               <div className='projects__button-slider-arrow projects__button-slider-arrow_left'></div>
               <span className='projects__button-slider-text'>Back</span>
             </button>
-            <div className='projects__paginations'></div>
+            <div
+              className='projects__paginations'
+              id='projects__paginations'
+            ></div>
             <button
               className='projects__button-slider projects__button-slider_right'
               onClick={() => swiperRef.current?.slideNext()}

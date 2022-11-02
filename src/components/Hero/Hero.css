@@ -33,8 +33,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   z-index: 2;
+  transition: opacity 300ms ease-in;
+}
+
+.hero__button:hover {
+  opacity: 0.8;
+}
+
+.hero__button:active .hero__button-text {
+  transform: scale(1.1);
+  transition: transform 300ms ease-in;
 }
 
 .hero__button_left {
@@ -52,13 +61,21 @@
   height: 17px;
   background-size: cover;
   background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.hero__button:active .hero__button-arrow {
+  transform: scale(1.1);
+  transition: transform 300ms ease-in;
 }
 
 .hero__button-arrow_left {
+  margin-right: 10px;
   background-image: url(../../assets/arrow-hero-left.svg);
 }
 
 .hero__button-arrow_right {
+  margin-left: 10px;
   background-image: url(../../assets/arrow-hero-right.svg);
 }
 

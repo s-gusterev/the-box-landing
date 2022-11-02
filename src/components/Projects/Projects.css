@@ -33,17 +33,18 @@
   line-height: 28px;
   color: #c2c7d6;
   cursor: pointer;
-  padding-left: 16px;
+  padding-left: 20px;
   padding-right: 0;
   padding-bottom: 0;
   padding-top: 0;
-
   box-sizing: border-box;
+  transition: color 300ms ease-in;
 }
 
 .projects__button_active {
   border-left: 4px solid #2947a9;
   color: #2947a9;
+  padding-left: 16px;
 }
 
 .projects__gallery {

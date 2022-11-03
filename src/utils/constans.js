@@ -218,11 +218,15 @@ const projects = [{
 }]
 
 
+const optionsSelectFeedback = [
+  { value: 'kate', label: 'Ekaterina Gromova' },
+  { value: 'andry', label: 'Andrey Smirnov' },
+  { value: 'juli', label: 'Julia Egorova' },
+];
 
 
 
 
 
 
-
-export { menu, heroSlider, reputationCards, services, experience, projects };
+export { menu, heroSlider, reputationCards, services, experience, projects, optionsSelectFeedback };

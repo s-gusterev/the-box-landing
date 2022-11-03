@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Select, { components } from 'react-select';
 import './Feedback.css';
+import { optionsSelectFeedback } from '../../utils/constans';
+import { customStyles } from './styleReactSelect';
 
 const DownIcon = () => {
   return (
@@ -29,61 +31,6 @@ const DropdownIndicator = (props) => {
 };
 
 const Feedback = () => {
-  const options = [
-    { value: 'kate', label: 'Ekaterina Gromova' },
-    { value: 'andry', label: 'Andrey Smirnov' },
-    { value: 'juli', label: 'Julia Egorova' },
-  ];
-
-  const customStyles = {
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isFocused ? '#2947a9' : 'white',
-      color: state.isFocused ? 'white' : '#2947a9',
-      padding: 10,
-    }),
-    control: (base, state) => ({
-      ...base,
-      border: state.isFocused ? '1px solid black' : '1px solid #e0e3eb',
-      backgroundColor: state.isSelected ? '#2947a9' : 'white',
-      width: '100%',
-      height: 43,
-      fontWeight: '400',
-      fontSize: 18,
-      lineHeight: '21px',
-      color: '#a3aac2',
-      outline: state.isFocused ? 0 : 0,
-      boxShadow: state.isFocused ? 0 : 0,
-      '&:hover': {
-        border: state.isFocused ? '1px solid black' : '1px solid #e0e3eb',
-      },
-    }),
-    placeholder: (provided) => ({
-      ...provided,
-      color: '#a3aac2',
-    }),
-    indicatorSeparator: (provided) => ({
-      ...provided,
-      display: 'none',
-    }),
-
-    menu: (provided) => ({
-      ...provided,
-      marginTop: 5,
-      padding: 0,
-      borderRadius: 4,
-      overflow: 'hidden',
-      boxShadow: 0,
-      border: '1px solid #e0e3eb',
-    }),
-    menuList: (provided) => ({
-      ...provided,
-      paddingTop: 0,
-      paddingBottom: 0,
-      boxSizing: 'border-box',
-    }),
-  };
-
   return (
     <section className='feedback'>
       <div className='container'>
@@ -104,6 +51,7 @@ const Feedback = () => {
               name='name'
               id='name'
               required
+              placeholder=' '
             />
             <label
               className='feedback__label feedback__label_type_required'
@@ -119,6 +67,7 @@ const Feedback = () => {
               name='email'
               id='email'
               required
+              placeholder=' '
             />
             <label
               className='feedback__label feedback__label_type_required'
@@ -129,25 +78,23 @@ const Feedback = () => {
           </div>
           <div className='feedback__form-inputs-container'>
             <Select
-              options={options}
+              options={optionsSelectFeedback}
               placeholder='Reason for Contacting'
               styles={customStyles}
               components={{ DropdownIndicator }}
               classNamePrefix='feedback__select'
             />
-            {/* <select className='feedback__input' required>
-              <option value='' autoFocus>
-                Reason for Contacting
-              </option>
-              <option value='item1'>Пункт 2</option>
-            </select> */}
           </div>
+
           <div className='feedback__form-inputs-container'>
-            <input className='feedback__input' type='tel' name='tel' id='tel' />
-            <label
-              className='feedback__label feedback__label_type_required'
-              htmlFor='tel'
-            >
+            <input
+              className='feedback__input'
+              type='tel'
+              name='tel'
+              id='tel'
+              placeholder=' '
+            />
+            <label className='feedback__label' htmlFor='tel'>
               Phone
             </label>
           </div>

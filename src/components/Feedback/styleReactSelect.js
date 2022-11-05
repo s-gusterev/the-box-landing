@@ -45,6 +45,11 @@ const customStyles = {
     paddingBottom: 0,
     boxSizing: 'border-box',
   }),
+
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingLeft: 6
+  })
 };
 
 export { customStyles }

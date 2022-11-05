@@ -41,6 +41,10 @@
   transition: color 300ms ease-in;
 }
 
+.projects__button:hover {
+  color: #2947a9;
+}
+
 .projects__button_active {
   border-left: 4px solid #2947a9;
   color: #2947a9;

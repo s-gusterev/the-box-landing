@@ -19,4 +19,9 @@
   line-height: 21px;
   text-align: left;
   color: #14171f;
+  transition: color 300ms ease-in;
+}
+
+.menu__link:hover {
+  color: #2947a9;
 }

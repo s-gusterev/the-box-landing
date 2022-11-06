@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { projects } from '../../utils/constans';
@@ -20,6 +20,36 @@ const Projects = () => {
   const swiperRef = useRef();
   const [cards, setCards] = useState(projects);
   const [activeProjectClass, setActiveProjectClass] = useState(0);
+  const [swiperSlides, setSwiperSlides] = useState(2);
+
+  const [size, setSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    if (size <= 640) {
+      setSwiperSlides(1);
+    } else {
+      setSwiperSlides(2);
+    }
+  }, []);
+
+  const handleResize = () => {
+    setSize(window.innerWidth);
+    if (size > 640) {
+      console.log(size);
+      setSwiperSlides(2);
+      console.log(swiperSlides);
+    }
+    if (size <= 640) {
+      console.log(size);
+      setSwiperSlides(1);
+      console.log(swiperSlides);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [size]);
 
   const addClassProjects = (index) => {
     setActiveProjectClass(index);
@@ -37,6 +67,8 @@ const Projects = () => {
     setCards(result);
     addClassProjects(index);
   };
+
+  console.log(swiperSlides);
 
   return (
     <section className='projects container'>
@@ -92,8 +124,8 @@ const Projects = () => {
           <div className='projects__cards'>
             <Swiper
               id='swiper-projects'
-              slidesPerView={2}
-              slidesPerGroup={2}
+              slidesPerView={swiperSlides}
+              slidesPerGroup={swiperSlides}
               grid={{
                 rows: 2,
                 fill: 'row',
@@ -137,7 +169,7 @@ const Projects = () => {
           <div
             className='projects__buttons'
             style={
-              cards.length > 5
+              cards.length > 5 || size < 640
                 ? { visibility: 'visible', transition: 'all ease 0ms' }
                 : { visibility: 'hidden', transition: 'all  ease 0ms' }
             }

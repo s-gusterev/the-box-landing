@@ -22,9 +22,9 @@ const App = () => {
         <Hero />
         <Reputation />
         <About />
-        {/* <Services />
+        <Services />
         <Experience />
-        <Consultation />
+        {/* <Consultation />
         <Projects />
         <Feedback /> */}
       </main>

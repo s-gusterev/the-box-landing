@@ -135,3 +135,140 @@
   color: #2947a9;
   outline: 2px solid #2947a9;
 }
+
+@media screen and (max-width: 1280px) {
+  .experience {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 54px;
+    padding-top: 122px;
+    padding-bottom: 57px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .experience__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .experience__card {
+    position: relative;
+  }
+
+  .experience__card:nth-child(1) {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .experience__card:nth-child(2) {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  .experience__card:nth-child(3) {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .experience__card:nth-child(4) {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .experience__card:nth-child(2) .experience__card-image {
+    left: 310px;
+  }
+  .experience__title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+
+  .experience__paragraph {
+    margin-bottom: 37px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience {
+    padding-top: 54px;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+  .experience__card-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .experience__card:nth-child(1) .experience__card-image {
+    right: -18px;
+    top: -9px;
+  }
+
+  .experience__card:nth-child(2) .experience__card-image {
+    left: 310px;
+    top: -20px;
+  }
+
+  .experience__card:nth-child(3) .experience__card-image {
+    right: -18px;
+    top: -9px;
+  }
+
+  .experience__card:nth-child(4) .experience__card-image {
+    right: -20px;
+    bottom: -19px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .experience__card:nth-child(2) .experience__card-image {
+    left: -20px;
+  }
+
+  .experience__card:nth-child(4) .experience__card-image {
+    right: -30px;
+  }
+
+  .experience__card {
+    padding: 15px 25px 15px 15px;
+  }
+
+  .experience__card-subtitle {
+    font-size: 62px;
+    line-height: 74px;
+  }
+  .experience__card-title {
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 15px;
+  }
+  .experience__title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .experience__paragraph {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

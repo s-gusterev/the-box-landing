@@ -18,7 +18,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main className='main'>
+      {/* <main className='main'>
         <Hero />
         <Reputation />
         <About />
@@ -29,7 +29,7 @@ const App = () => {
         <Feedback />
       </main>
 
-      <Footer />
+      <Footer /> */}
     </>
   );
 };

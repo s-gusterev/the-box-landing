@@ -6,10 +6,10 @@
 }
 
 .menu__item {
-  margin-right: 50px;
+  margin-left: 50px;
 }
-.menu__item:last-child {
-  margin-right: 0;
+.menu__item:first-child {
+  margin-left: 0;
 }
 
 .menu__link {
@@ -24,4 +24,10 @@
 
 .menu__link:hover {
   color: #2947a9;
+}
+
+@media screen and (max-width: 806px) {
+  .menu {
+    display: none;
+  }
 }

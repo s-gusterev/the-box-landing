@@ -2,9 +2,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap);
 
 .container {
-  max-width: 1216px;
+  max-width: 1246px;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  box-sizing: border-box;
 }

@@ -10,9 +10,11 @@ import Reputation from './Reputation/Reputation';
 import Services from './Services/Services';
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
+import MenuMobile from './MenuMobile/MenuMobile';
+import Burger from './Burger/Burger';
 import HeroSwiperCard from './HeroSwiperCard/HeroSwiperCard';
 import SectionTitle from './SectionTitle/SectionTitle';
 import ReputationCard from './ReputationCard/ReputationCard';
 
 
-export { Header, Hero, About, Consultation, Experience, Feedback, Footer, Projects, Reputation, Services, Logo, Menu, HeroSwiperCard, SectionTitle, ReputationCard }
+export { Header, Hero, About, Consultation, Experience, Feedback, Footer, Projects, Reputation, Services, Logo, Menu, MenuMobile, Burger, HeroSwiperCard, SectionTitle, ReputationCard }

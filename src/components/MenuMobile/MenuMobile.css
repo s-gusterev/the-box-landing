@@ -1,0 +1,29 @@
+.menu-mobile {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid red;
+}
+
+.menu-mobile__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-mobile__item {
+  padding: 10px;
+}
+
+.menu-mobile__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 27px;
+  color: #14171f;
+}

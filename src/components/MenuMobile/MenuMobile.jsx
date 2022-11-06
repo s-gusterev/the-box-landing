@@ -1,9 +1,9 @@
 import React from 'react';
 import './MenuMobile.css';
 
-const MenuMobile = ({ menu }) => {
+const MenuMobile = ({ menu, isOpen }) => {
   return (
-    <nav className='menu-mobile'>
+    <nav className={`menu-mobile ${isOpen ? 'menu-mobile_open' : ''}`}>
       <ul className='menu-mobile__list'>
         {menu.map((item) => {
           return (

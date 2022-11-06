@@ -5,17 +5,14 @@ import { Logo, Menu, MenuMobile, Burger } from '..';
 import './Header.css';
 
 const Header = () => {
-  const [activeBurger, setActiveBurger] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className='container header'>
       <Logo />
       <Menu menu={menu} />
-      <MenuMobile menu={menu} />
-      <Burger
-        active={activeBurger}
-        onClick={() => setActiveBurger(!activeBurger)}
-      />
+      <MenuMobile menu={menu} isOpen={openMenu} />
+      <Burger active={openMenu} onClick={() => setOpenMenu(!openMenu)} />
     </header>
   );
 };

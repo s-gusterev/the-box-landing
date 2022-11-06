@@ -4,6 +4,7 @@
   background-color: transparent;
   border: 0;
   padding: 0;
+  display: none;
 }
 
 .burger__line {
@@ -122,5 +123,11 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 806px) {
+  .burger {
+    display: block;
   }
 }

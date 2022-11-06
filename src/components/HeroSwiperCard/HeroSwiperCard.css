@@ -44,3 +44,22 @@
   margin-right: auto;
   max-width: 312px;
 }
+
+@media screen and (max-width: 450px) {
+  .hero__card {
+    width: 100%;
+    min-height: 130px;
+  }
+  .hero__card-suptitle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .hero__card-title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+}

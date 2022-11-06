@@ -87,3 +87,22 @@
   right: 0;
   bottom: 0;
 }
+
+@media screen and (max-width: 806px) {
+  .hero {
+    height: 565px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero__button_left {
+    left: 0;
+    width: 50vw;
+    /* border-right: 3px solid white; */
+  }
+
+  .hero__button_right {
+    right: 0;
+    width: 50vw;
+  }
+}

@@ -18,18 +18,18 @@ const App = () => {
   return (
     <>
       <Header />
-      {/* <main className='main'>
+      <main className='main'>
         <Hero />
-        <Reputation />
+        {/* <Reputation />
         <About />
         <Services />
         <Experience />
         <Consultation />
         <Projects />
-        <Feedback />
+        <Feedback /> */}
       </main>
 
-      <Footer /> */}
+      {/* <Footer /> */}
     </>
   );
 };

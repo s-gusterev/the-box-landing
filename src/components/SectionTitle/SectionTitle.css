@@ -19,3 +19,10 @@
 .section-title_position_left {
   text-align: left;
 }
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}

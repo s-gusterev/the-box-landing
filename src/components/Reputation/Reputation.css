@@ -13,6 +13,25 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 66px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 806px) {
+  .reputation__list {
+    row-gap: 40px;
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reputation {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  .reputation__title {
+    padding-bottom: 38px;
+  }
 }

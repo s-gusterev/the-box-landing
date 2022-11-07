@@ -21,14 +21,19 @@ const Projects = () => {
   const [cards, setCards] = useState(projects);
   const [activeProjectClass, setActiveProjectClass] = useState(0);
   const [swiperSlides, setSwiperSlides] = useState(2);
+  const [swiperGridFill, setsSwiperGridFill] = useState('');
 
   const [size, setSize] = useState(window.innerWidth);
+
+  // const swiperContainer = document.querySelector('.')
 
   useEffect(() => {
     if (size <= 640) {
       setSwiperSlides(1);
+      setsSwiperGridFill('column');
     } else {
       setSwiperSlides(2);
+      setsSwiperGridFill('row');
     }
   }, []);
 
@@ -37,11 +42,13 @@ const Projects = () => {
     if (size > 640) {
       console.log(size);
       setSwiperSlides(2);
+      setsSwiperGridFill('row');
       console.log(swiperSlides);
     }
     if (size <= 640) {
       console.log(size);
       setSwiperSlides(1);
+      setsSwiperGridFill('column');
       console.log(swiperSlides);
     }
   };
@@ -121,51 +128,54 @@ const Projects = () => {
           </li>
         </ul>
         <div className='projects__gallery'>
-          <div className='projects__cards'>
-            <Swiper
-              id='swiper-projects'
-              slidesPerView={swiperSlides}
-              slidesPerGroup={swiperSlides}
-              grid={{
-                rows: 2,
-                fill: 'row',
-              }}
-              spaceBetween={32}
-              pagination={{
-                clickable: true,
-                el: '.projects__paginations',
-              }}
-              navigation={{
-                nextEl: '.projects__button-slider_right',
-                prevEl: '.projects__button-slider_left',
-              }}
-              modules={[Grid, Pagination, Navigation]}
-              className='projects__cards'
-            >
-              <AnimatePresence>
-                {cards.map((card) => (
-                  <SwiperSlide key={card.id} className='projects__card'>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
-                      <img
-                        className='projects__card-img'
-                        src={card.image}
-                        alt={card.title}
-                      />
-                      <div className='project__card-text'>
-                        <h3 className='projects__card-title'>{card.title}</h3>
-                        <p className='projects__card-address'>{card.address}</p>
-                      </div>
-                    </motion.div>
-                  </SwiperSlide>
-                ))}
-              </AnimatePresence>
-            </Swiper>
-          </div>
+          <Swiper
+            id='swiper-projects'
+            slidesPerView={swiperSlides}
+            slidesPerGroup={swiperSlides}
+            grid={{
+              rows: swiperSlides,
+              fill: 'row',
+            }}
+            spaceBetween={32}
+            pagination={{
+              clickable: true,
+              el: '.projects__paginations',
+            }}
+            navigation={{
+              nextEl: '.projects__button-slider_right',
+              prevEl: '.projects__button-slider_left',
+            }}
+            modules={[Grid, Pagination, Navigation]}
+            className={`${
+              swiperSlides === 1
+                ? 'projects__cards swiper-grid-column'
+                : 'projects__cards'
+            }`}
+          >
+            {console.log(swiperGridFill)}
+            <AnimatePresence>
+              {cards.map((card) => (
+                <SwiperSlide key={card.id} className='projects__card'>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <img
+                      className='projects__card-img'
+                      src={card.image}
+                      alt={card.title}
+                    />
+                    <div className='project__card-text'>
+                      <h3 className='projects__card-title'>{card.title}</h3>
+                      <p className='projects__card-address'>{card.address}</p>
+                    </div>
+                  </motion.div>
+                </SwiperSlide>
+              ))}
+            </AnimatePresence>
+          </Swiper>
           <div
             className='projects__buttons'
             style={

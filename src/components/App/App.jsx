@@ -19,12 +19,12 @@ const App = () => {
     <>
       <Header />
       <main className='main'>
-        {/* <Hero />
+        <Hero />
         <Reputation />
         <About />
         <Services />
         <Experience />
-        <Consultation /> */}
+        <Consultation />
         <Projects />
         {/* <Feedback /> */}
       </main>

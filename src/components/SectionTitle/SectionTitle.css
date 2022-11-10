@@ -26,3 +26,10 @@
     line-height: 38px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}

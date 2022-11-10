@@ -145,3 +145,19 @@
   font-size: 18px;
   line-height: 21px;
 }
+
+@media screen and (max-width: 597px) {
+  .feedback__form {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback__select__control {
+    margin-bottom: 20px;
+  }
+
+  .feedback__description {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 28px;
+  }
+}

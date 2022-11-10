@@ -182,6 +182,9 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .projects {
+    padding-bottom: 108px;
+  }
   .projects__content {
     flex-direction: column;
     align-items: center;
@@ -191,6 +194,18 @@
     display: flex;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    row-gap: 15px;
+    justify-content: center;
+  }
+
+  .projects__card-title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .projects__card-address {
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .projects__button {
@@ -241,5 +256,21 @@
 
   .projects__item {
     margin-bottom: 0;
+  }
+
+  .projects__button {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .projects {
+    padding-top: 48px;
+    padding-bottom: 108px;
+  }
+
+  .projects__title {
+    padding-bottom: 20px;
   }
 }

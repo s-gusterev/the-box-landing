@@ -118,13 +118,12 @@
     padding-top: 74px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-auto-rows: 1fr;
   }
 
   .about__img {
     grid-column: 1/-1;
     grid-row: auto;
-    max-height: 500px;
+    max-height: 300px;
   }
 
   .about__content {
@@ -137,11 +136,26 @@
 
 @media screen and (max-width: 425px) {
   .about__content {
-    padding: 30px 30px;
+    padding: 26px 26px;
   }
 
   .about {
     padding-top: 24px;
     padding-bottom: 54px;
+  }
+
+  .about__paragraph {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .about__paragraph:first-child {
+    margin-bottom: 24px;
+  }
+
+  .about__button {
+    padding: 14px 18px;
+    font-size: 16px;
+    line-height: 19px;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Header,
   Hero,
@@ -15,6 +15,10 @@ import {
 import './App.css';
 
 const App = () => {
+  useEffect(() => {
+    document.title = 'React Landing Page - TheBox';
+  }, []);
+
   return (
     <>
       <Header />

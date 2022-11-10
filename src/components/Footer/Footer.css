@@ -24,6 +24,10 @@
   margin-bottom: 0;
 }
 
+.footer__contacts {
+  position: relative;
+}
+
 .footer__contacts-title {
   font-weight: 500;
   font-size: 20px;
@@ -40,7 +44,7 @@
 
 .footer__item {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .footer__item-text {
@@ -155,4 +159,110 @@
 .footer__link-social:hover svg path {
   transition: fill 300ms ease-out;
   fill: #f9995d;
+}
+
+@media screen and (max-width: 975px) {
+  .footer__container.footer__container_position_top {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer__container_position_top .footer__contacts:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    column-gap: 10px;
+  }
+
+  .footer__container_position_top
+    .footer__contacts:last-child
+    .footer__contacts-title {
+    grid-column: 1/2;
+  }
+
+  .footer__container_position_top
+    .footer__contacts:last-child
+    .footer__contacts-title.footer__contacts-title_type_social {
+    grid-row: 1/1;
+    grid-column: 2/3;
+  }
+
+  .footer__container_position_top .footer__contacts:last-child .footer__form {
+    grid-column: 1/2;
+  }
+
+  .footer__input {
+    min-width: 230px;
+  }
+
+  .footer__logo {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .footer__input {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__contacts-title,
+  .footer__item-text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .footer__container_position_top .footer__contacts:last-child {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer__container_position_top
+    .footer__contacts:last-child
+    .footer__contacts-title {
+    grid-column: 1/-1;
+  }
+
+  .footer__container_position_top
+    .footer__contacts:last-child
+    .footer__contacts-title.footer__contacts-title_type_social {
+    grid-row: auto;
+    grid-column: 1/-1;
+    text-align: center;
+  }
+
+  .footer__form {
+    margin-bottom: 22px;
+  }
+
+  .footer__item {
+    flex-direction: column;
+  }
+
+  .footer__item .footer__contacts-title {
+    margin-bottom: 8px;
+  }
+
+  .footer__logo {
+    top: -70px;
+    right: 50%;
+    transform: translateY(0) translateX(50%);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__contacts-title,
+  .footer__item-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .footer__container_position_top {
+    padding-bottom: 48px;
+  }
 }

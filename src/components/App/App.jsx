@@ -29,7 +29,7 @@ const App = () => {
         <Feedback />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

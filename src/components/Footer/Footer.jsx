@@ -27,7 +27,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <Logo />
+          <Logo className='footer__logo' />
         </div>
         <div className='footer__contacts'>
           <h3 className='footer__contacts-title footer__contacts-title_margin_bottom'>
@@ -45,7 +45,7 @@ const Footer = () => {
               Subscribe
             </button>
           </form>
-          <h3 className='footer__contacts-title footer__contacts-title_margin_bottom'>
+          <h3 className='footer__contacts-title footer__contacts-title_type_social footer__contacts-title_margin_bottom'>
             Social:
           </h3>
           <ul className='footer__list-social'>
